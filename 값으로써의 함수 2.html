@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Function</title>
+    </head>
+<html>
+    <body>
+        <h1>자바스크립트 값으로서의 함수2</h1>
+        <script>
+            function sqr(x){
+                return x*x;
+            }
+            var sqrNum = sqr;
+            document.write(sqr(4)+"<br>"); //함수호출
+            document.write(sqrNum(4));//변수를 함수처럼호출
+
+        </script>
+    </body>
+</html>
