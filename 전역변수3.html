@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Function</title>
+    </head>
+<html>
+    <body>
+        <h1>같은 이름의 전역 변수와 지역 변수</h1>
+        <script>
+            var num =10;
+            function globalNum(){
+                var num = 20;
+                document.write(num+"<br>");
+            }
+            globalNum();
+            document.write(num);
+        </script>
+    </body>
+</html>
