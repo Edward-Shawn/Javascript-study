@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>나머지 매개변수</title>
+</head>
+<html>
+    <body>
+        <script>
+            function sub(firstNum, ...restArgs){
+                for(var i = 0; i < restArgs.length; i++){
+                    firstNum -= restArgs[i];
+                }
+                return firstNum;
+            }
+            document.write(sub(10, 2, 3)+"<br>");
+            document.write(sub(10,1,5,8));
+        </script>
+    </body>
+</html>
