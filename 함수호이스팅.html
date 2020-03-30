@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Function</title>
+    </head>
+<html>
+    <body>
+        <h1>함수의 유효범위</h1>
+        <script>
+
+            var globalNum = 10; //지역변수
+
+            function printNum(){
+                document.write(globalNum+"<br>");   //지역변수 선언전
+                var globalNum = 20; //지역변수 선언후
+           
+                document.write(globalNum);   
+                }
+                printNum();
+
+           
+        </script>
+    </body>
+</html>
