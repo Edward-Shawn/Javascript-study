@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>나머지 매개변수</title>
+</head>
+<html>
+    <body>
+        <script>
+            function sub(){
+                var firstNum = arguments[0];
+
+                for(var i = 0; i < arguments.length-1; i++) {
+                    firstNum -= arguments [i+1];
+                }
+                return firstNum;
+            }
+            document.write(sub(10, 2, 3)+"<br>");
+            document.write(sub(10,1,5,8));
+        </script>
+    </body>
+</html>
