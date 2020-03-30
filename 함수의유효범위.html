@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Function</title>
+    </head>
+<html>
+    <body>
+        <h1>함수의 유효범위</h1>
+        <script>
+
+
+             //전역변수
+           var x = 10, y =20;    
+
+            //전역함수
+           function sub(){
+                return x - y;   //전역변수 x,y에 접근
+           }
+            document.write("전역 함수에서 x - y 값은 " + sub()+"<br>");
+
+
+            //전역함수
+           function parentFunc(){
+               var x = 1, y = 2;  //전역 변수와 같은 이름을 선언하여 전역 변수의 범위제한
+
+                function add(){     //내부함수로 선언
+                    return x + y;
+                }
+                return add();
+           }
+           document.write("내부 함수에서 x + y 의 값은"+ parentFunc()+"입니다.<br>");
+
+           
+        </script>
+    </body>
+</html>
