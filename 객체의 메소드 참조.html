@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object</title>
+    </head>
+<html>
+    <body>
+        <h1>객체의 메소드 참조</h1>
+        <script>
+            var person = {
+                name: "Shawn",
+                birthday: "930610",
+                pld: "1234567",
+                fulld: function(){
+                    return this.birthday + this.pld;
+                }
+            };
+
+            
+            document.write(person.fulld()+"<br>");
+            document.write(person.fulld);
+        </script>
+    </body>
+</html>
