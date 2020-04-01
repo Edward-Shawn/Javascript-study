@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object</title>
+    </head>
+<html>
+    <body>
+        <h1>Object.create() 메소드를 이용한 객체 생성</h1>
+        <script>
+            var obj = Object.create(null, {
+                x: { value: 100, enumerable: true},
+                y: { value: 200, enumerable: true}
+
+            });
+
+            document.write(obj.x + "<br/>");
+            document.write(obj.y + "<br/>");
+            document.write(Object.getPrototypeOf(obj));
+
+
+        </script>
+    </body>
+</html>
