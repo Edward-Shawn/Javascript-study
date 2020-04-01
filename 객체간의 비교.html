@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object</title>
+    </head>
+<html>
+    <body>
+
+        <h1>객체간의 비교</h1>
+
+        <script>
+            function Dog(color, name, age) {
+                this.color = color;
+                this.name = name;
+                this.aeg = age;
+            }
+
+            var myDog = new Dog ("검정", "뿌꾸", 10);
+            var hisDog = new Dog ("흰색", "쿠키", 5);
+            document.write((myDog == hisDog ) + "<br>");
+            document.write((myDog === hisDog) + "<br>");
+
+            var herDog = hisDog;
+            document.write((hisDog == herDog)+"<br>");
+            document.write((hisDog === herDog)+"<br>");
+            
+
+        </script>
+
+    </body>
+</html>
