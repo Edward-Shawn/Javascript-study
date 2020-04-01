@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object</title>
+    </head>
+<html>
+    <body>
+
+        <h1>객체 프로퍼티의 순회</h1>
+
+        <script>
+            function Dog(color, name, age) {
+                this.color = color;
+                this.name = name;
+                this.aeg = age;
+            }
+
+            var myDog = new Dog("흰색", "뿌꾸", 10);
+            
+            Object.defineProperty(myDog, 'color', {enumerable:false});
+
+            document.write(Object.keys(myDog)+"<br>");
+
+            document.write(Object.getOwnPropertyNames(myDog));
+
+        </script>
+
+    </body>
+</html>
