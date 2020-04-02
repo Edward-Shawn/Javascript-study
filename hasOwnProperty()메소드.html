@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object Method</title>
+    </head>
+<html>
+    <body>
+
+        <h1>객체의 hasOwnProperty() 메소드</h1>
+
+        <script>
+            function Dog(color, name, age, family) {
+                this.color = color;
+                this.name = name;
+                this.age = age;
+                this.family = family;
+                this.breed = function() {
+                    return this.color + " " + this.family;
+                };
+            }
+
+            var myDog = new Dog ("검정", "뿌꾸", 10);
+            
+            document.write(myDog.hasOwnProperty("color")+"<br>");
+            document.write(myDog.hasOwnProperty("breed")+"<br>");
+            document.write(myDog.hasOwnProperty("class"));
+
+        </script>
+
+    </body>
+</html>
