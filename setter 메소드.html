@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Object Method</title>
+</head>
+<html>
+    <body> 
+        
+        <h1>setter</h1>
+
+        <script>
+           
+            var shawn = {age:18};
+
+            shawn.age = 28;
+            document.write(shawn.age + "<br>");
+
+            Object.defineProperty(shawn, "changeAge", { set:function(n) { this.age = this.age - n; } } );
+            shawn.changeAge = 5;
+            document.write(shawn.age);
+        </script>
+    </body>
+</html>
