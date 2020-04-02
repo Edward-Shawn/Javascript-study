@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object Method</title>
+    </head>
+<html>
+    <body>
+
+        <h1>객체의 valueOf() 메소드</h1>
+
+        <script>
+           function func (n) {
+               this.number = n;
+           }
+           myFunc = new func (4);
+           document.write(myFunc + 5);
+
+           func.prototype.valueOf = function() {
+               return this.number;
+           }
+           document.write("<br><br>")
+           document.write(myFunc + 5);
+
+        </script>
+
+    </body>
+</html>
