@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object Method</title>
+    </head>
+<html>
+    <body>
+
+        <h1>객체의 isExtensible() 메소드</h1>
+
+        <script>
+           var day = new Date();
+
+            document.write(Object.isExtensible(day)+"<br>");
+
+            var myDay = Object.preventExtensions(day);
+            document.write(Object.isExtensible(day));
+
+        </script>
+
+    </body>
+</html>
