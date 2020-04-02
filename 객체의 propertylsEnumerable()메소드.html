@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object Method</title>
+    </head>
+<html>
+    <body>
+
+        <h1>객체의 propertylsEnumerable() 메소드</h1>
+
+        <script>
+            function Dog(color, name, age, family) {
+                this.color = color;
+                this.name = name;
+                this.age = age;
+            }
+
+            var myDog = new Dog ("검정", "뿌꾸", 10);
+            
+            Object.defineProperty(myDog, 'color', { enumerable : false} );
+            
+            document.write(myDog.propertyIsEnumerable("color")+"<br>");
+            document.write(myDog.propertyIsEnumerable("name")+"<br>");
+            document.write(myDog.propertyIsEnumerable("age"));
+            
+        </script>
+
+    </body>
+</html>
