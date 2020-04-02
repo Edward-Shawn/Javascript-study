@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Object Method</title>
+    </head>
+<html>
+    <body>
+
+        <h1>getter 메소드</h1>
+
+        <script>
+            var shawn = { age: 28 };
+            document.write(shawn.age + "<br>");
+
+            Object.defineProperty(shawn, "americanAge", { get:function() { return this.age - 1; } });
+            document.write(shawn.americanAge);
+        </script>
+
+    </body>
+</html>
