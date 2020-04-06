@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Array</title>
+    
+</head>
+<html>
+    <body>
+
+        <h1>다차원 배열</h1>
+
+        
+        <script>
+
+           var arr = new Array(3);
+           for (var row = 0; row < 3; row++ ){
+               arr[row] = new Array(4);
+               for (var column = 0; column < 4; column++){
+                   arr[row][column] = "[" + row + "," + column + "]";
+                   document.write(arr[row][column] + "");
+               }
+               document.write("<br>")
+           } 
+           document.write(arr.length);
+
+        </script>
+
+    </body>
+</html>
