@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달연습2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.158);
+            display: none;
+        }
+        .modal_con{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            box-shadow: 1px 1px 10px 1px black;
+        }
+        .modal_con h1{
+            margin-left: 20px;
+        }
+
+        span{
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+            float: right;
+            margin-right: 20px;
+        }
+        .top{
+            background: skyblue;
+            padding: 10px 0;
+            
+        }
+        .mid{
+            height:175px;
+            background: white;
+        }
+        .btn{
+            
+            background: skyblue;
+            padding: 10px 0;
+        }
+
+        .event{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .event h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        button{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="event">
+        <h1>hello</h1>
+        <button id="click">click me</button>
+    </div>
+    <div class="modal">
+        <div class="modal_con">
+            <div class="top">
+                <span id="close">&times;</span>
+                <h1>top page</h1>
+            </div>
+            <div class="mid">
+            <h1>mid page</h1>
+            </div>
+            <div class="btn">
+                <h1>btn page</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       var button = document.getElementById("click");
+       var modal = document.getElementsByClassName("modal")[0];
+        var close = document.getElementById("close");
+
+        button.onclick = function(){
+            modal.style.display = "block";
+        }
+
+        close.onclick = function(){
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
