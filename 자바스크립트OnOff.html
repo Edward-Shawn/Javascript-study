@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 On / Off</title>
+    <style>
+        button{
+            padding: 30px;
+            font-size: 25px;
+        }
+
+        div{
+            width: 200px; height: 200px;
+            background: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <div id="box"></div>
+    <script>
+        var btn = document.getElementById('btn');
+        var box = document.getElementById('box');
+        btn.onclick = function(){
+            if(box.style.display=='none'){
+                box.style.display ='block';
+            }else{
+                box.style.display='none';
+            }
+        }
+
+    </script>
+</body>
+</html>
