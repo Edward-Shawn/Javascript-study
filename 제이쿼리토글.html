@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jqurey Toggle</title>
+    <style>
+        button{
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        div{
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            background: grey;
+        }   
+
+
+    </style>
+</head>
+<body>
+    <button>On / Off</button>
+    
+
+    <div class="box">
+        <p>This is a paragraph.</p>
+    </div>
+    
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        // $(document).ready(function(){
+
+        //     $('button').click(function(){
+        //         $('p').toggle();
+        //     })
+
+        // })
+
+            $(document).ready(function(){
+                $('button').click(function(){
+                    $('p').toggle();
+                })
+            })
+
+
+    </script>
+</body>
+</html>
