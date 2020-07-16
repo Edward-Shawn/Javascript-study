@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b3294b62f.js" crossorigin="anonymous"></script>
+    <title>모바일클릭메뉴</title>
+    <link rel="stylesheet" href="css/모바일클릭메뉴.css">
+    <style>
+        i{display: none;}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <i class="fas fa-bars"></i>
+        <ul class="gnb">
+            <li class="active">home<i class="fas fa-angle-down"></i></li>
+            <li>about<i class="fas fa-angle-down"></i></li>
+            <li>service<i class="fas fa-angle-down"></i></li>
+            <li>gallery<i class="fas fa-angle-down"></i></li>
+            <li>contact<i class="fas fa-angle-down"></i></li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+            $(".gnb li").click(function(){
+
+
+                $(".gnb li").removeClass("active");
+                $(this).addClass("active");
+
+                $(".gnb li i").hide();
+                $(this).find("i").show();
+
+            
+            });
+            $(".gnb li").eq(0).trigger("click");
+        })
+    </script>
+</body>
+</html>
