@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="btn()">버튼 클릭</button>
+    <script>
+
+        var newDIV = document.createElement("button");
+        DIVtext = document.createTextNode("응 켰다");
+        newDIV.appendChild( DIVtext );
+
+
+        var newDIV2 = document.createElement("button");
+        DIVtext2 = document.createTextNode("아니 안켰는데?");
+        newDIV2.appendChild( DIVtext2 );
+
+       function btn(){
+
+           document.write("버튼 눌렀냐?<br><br>");
+            document.body.appendChild(newDIV);
+            document.body.appendChild(newDIV2);
+       } 
+
+       newDIV.onclick = function(){
+           alert("켰음");
+       }
+       
+       newDIV2.onclick = function(){
+           alert("안켰음");
+       }
+
+    </script>
+</body>
+</html>
