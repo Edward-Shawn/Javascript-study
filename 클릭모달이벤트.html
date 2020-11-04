@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn1{padding: 10px; font-size: 20px;}
+        .modal{display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.267);}
+        .mymodal{text-align: center; width: 400px; height: 200px; background: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .select button{font-size: 20px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <button onclick="btn()" class="btn1">클릭해봐</button>
+    <div id="modal" class="modal">
+        <div class="mymodal">
+            <h1>나오지?</h1>
+            <div class="select">
+                <button id="btn1">ㅇㅇ</button>
+                <button id="btn2">ㄴㄴ</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+      
+        var modal = document.getElementById("modal");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+
+        
+        function btn(){
+            modal.style.display = "block";
+        }
+
+        btn1.onclick = function(){
+            alert("알았다");
+            modal.style.display = "none";
+        }
+
+
+        
+    </script>
+</body>
+</html>
