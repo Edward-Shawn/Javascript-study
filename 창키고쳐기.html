@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{font-size: 30px; padding: 10px;}
+        .modal{display: none; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0, 0, 0, 0.315); position: fixed;}
+        .mymodal{width: 400px; height: 200px; border: 1px solid gray; text-align: center; background: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        span{float:right; font-size: 30px; margin-right: 20px;}
+    </style>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <div id="modal" class="modal">
+        <div class="mymodal">
+            <span id="xbtn">&times;</span>
+            <h1>hello</h1>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById('modal');
+        var btn = document.getElementById('btn');
+        var xbtn = document.getElementById('xbtn');
+
+        btn.onclick = function(){
+            modal.style.display="block";
+        }
+
+        xbtn.onclick = function(){
+            modal.style.display="none";
+        }
+
+        window.onclick = function(e){
+            if(e.target == modal){
+                modal.style.display="none";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
