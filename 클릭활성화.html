@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{margin: 0; padding: 0;}
+        ul{float: right;}
+        ul li{float: left; list-style: none; border: 1px solid #777; padding: 10px 10px;}
+        a{text-decoration: none; color: #777; text-transform: uppercase; font-weight: bold;}
+
+        ul li.active{background: #777;}
+        ul li.active a{color: #fff;}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="active">
+                <a href="">button</a>
+            </li>
+            <li>
+                <a href="">button</a>
+            </li>
+            <li>
+                <a href="">button</a>
+            </li>
+            <li>
+                <a href="">button</a>
+            </li>
+            <li>
+                <a href="">button</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("ul li").click(function(e){
+                e.preventDefault();
+
+                if(!$(this).hasClass("active")){
+                    $("ul li").removeClass("active");
+                    $(this).addClass("active");
+                }else{
+
+                    $(this).removeClass("active");
+                }
+
+            })
+        })
+    </script>
+</body>
+</html>
